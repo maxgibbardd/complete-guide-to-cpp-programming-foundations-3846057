@@ -11,9 +11,9 @@ int main(){
     // start of my code
     std::string name;
 
-    std::cout << "Please enter your name: ";
+    std::cout << "Please enter your name: " << std::flush;
     std::cin >> name;
-    std::cout << "Your name is " << name << "!" << std::endl;
+    std::cout << "Nice to meet you, " << name << "!" << std::endl;
     // end of my code
 
     std::cout << std::endl << std::endl;
