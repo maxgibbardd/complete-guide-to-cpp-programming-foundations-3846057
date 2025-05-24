@@ -6,6 +6,17 @@
 #include <cstdint>
 
 int main(){
+    float target_x;
+    int32_t sprite_x;
+    uint32_t player_x;
+
+    target_x = -123.45;
+    sprite_x = target_x;    // gets truncated, so sprite_x = 123
+    player_x = sprite_x;    // 32 bit version, 2's compliment of 123
+
+    std::cout << "Target X (float):    " << target_x << std::endl;
+    std::cout << "Sprite X (int32_t):  " << sprite_x << std::endl;
+    std::cout << "Player X (uint32_t): " << static_cast<int32_t>(player_x) << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;
